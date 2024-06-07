@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: app-of-apps/apps
-    repoURL: https://github.com/christianh814/gitops-examples
+    repoURL: https://github.com/rishabhsvats/gitops-examples
     targetRevision: main
   syncPolicy:
     automated:
