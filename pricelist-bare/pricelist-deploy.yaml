@@ -17,6 +17,7 @@ spec:
       tier: frontend
   strategy: {}
   template:
+  
     metadata:
       creationTimestamp: null
       labels:
@@ -25,6 +26,13 @@ spec:
     spec:
       containers:
       - image: quay.io/redhatworkshops/pricelist:latest
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "256m"
+          limits:
+            memory: "256Mi"
+            cpu: "256m"
         name: pricelist
         env:
         - name: MYSQL_DATABASE
