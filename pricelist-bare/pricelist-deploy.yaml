@@ -31,7 +31,6 @@ spec:
             memory: "256Mi"
             cpu: "256m"
           limits:
-            cpu: {}
             memory: "256Mi"
         name: pricelist
         env:
