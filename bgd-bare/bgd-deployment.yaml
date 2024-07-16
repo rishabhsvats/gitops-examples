@@ -18,18 +18,8 @@ spec:
       labels:
         app: bgd
     spec:
-      topologySpreadConstraints:
-        - maxSkew: 1
-          minDomains: 1
-          topologyKey: "kubernetes.io/hostname"
-          whenUnsatisfiable: "DoNotSchedule"
-          labelSelector:
-            matchLabels:
-              app: bgd
-          matchLabelKeys:
-            - bgd
-          nodeAffinityPolicy: Honor
-          nodeTaintsPolicy: Ignore
+      nodeSelector:
+        topology.kubernetes.io/region: testregion
       containers:
       - image: quay.io/redhatworkshops/bgd:latest
         resources:
