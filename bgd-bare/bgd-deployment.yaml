@@ -11,10 +11,10 @@ spec:
   selector:
     matchLabels:
       app: bgd
-  strategy: {}
+  strategy:
+    type: Recreate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: bgd
     spec:
