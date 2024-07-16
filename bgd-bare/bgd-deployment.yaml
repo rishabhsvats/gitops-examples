@@ -18,8 +18,6 @@ spec:
       labels:
         app: bgd
     spec:
-      nodeSelector:
-        topology.kubernetes.io/region: testregion
       containers:
       - image: quay.io/redhatworkshops/bgd:latest
         resources:
@@ -33,3 +31,5 @@ spec:
         env:
         - name: COLOR
           value: "blue"
+      nodeSelector:
+        topology.kubernetes.io/region: testregion
