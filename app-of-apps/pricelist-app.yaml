@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: pricelist-app
-  namespace: pricelist
+  namespace: argocd-gitops
 spec:
   destination:
     namespace: pricelist
