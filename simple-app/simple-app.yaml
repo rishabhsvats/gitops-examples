@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: child-app
   namespace: test-gitops
+  annotations:
+    argocd.argoproj.io/managed-by-url: "https://https://test-gitops-server-test-gitops.apps.rosa.brxbr-w747r-sba.3dnq.p3.openshiftapps.com"
 spec:
   destination:
     namespace: test-gitops
