@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: parent-app
-  namespace: openshift-gitops
+  name: child-app
+  namespace: test-gitops
 spec:
   destination:
     namespace: test-gitops
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: simple-app/app 
-    repoURL: https://github.com/rishabhsvats/gitops-examples
+    path: guestbook 
+    repoURL: https://github.com/rishabhsvats/argocd-example-apps.git
     targetRevision: main
   syncPolicy:
     automated:
