@@ -1,0 +1,9 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ArgoCD
+metadata:
+  name: test-gitops
+  namespace: test-gitops
+spec:
+  server:
+    route:
+      enabled: true
