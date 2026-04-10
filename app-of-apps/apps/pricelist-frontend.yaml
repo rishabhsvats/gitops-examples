@@ -4,7 +4,7 @@ metadata:
   annotations:
     argocd.argoproj.io/manifest-generate-paths: .
   name: pricelist-frontend
-  namespace: pricelist
+  namespace: argocd-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
